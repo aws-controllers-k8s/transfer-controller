@@ -1,0 +1,26 @@
+apiVersion: rbac.authorization.k8s.io/v1
+kind: ClusterRoleBinding
+metadata:
+  name: ack-namespaces-cache-transfer-controller
+roleRef:
+  kind: ClusterRole
+  apiGroup: rbac.authorization.k8s.io
+  name: ack-namespaces-cache-transfer-controller
+subjects:
+- kind: ServiceAccount
+  name: {{ include "ack-transfer-controller.service-account.name" . }}
+  namespace: {{ .Release.Namespace }}
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: RoleBinding
+metadata:
+  name: ack-configmaps-cache-transfer-controller
+  namespace: {{ .Release.Namespace }}
+roleRef:
+  kind: Role
+  apiGroup: rbac.authorization.k8s.io
+  name: ack-configmaps-cache-transfer-controller
+subjects:
+- kind: ServiceAccount
+  name: {{ include "ack-transfer-controller.service-account.name" . }}
+  namespace: {{ .Release.Namespace }}
