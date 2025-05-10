@@ -1,0 +1,16 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: null
+  name: ack-transfer-reader
+  namespace: default
+rules:
+- apiGroups:
+  - transfer.services.k8s.aws
+  resources:
+  - webapps
+  verbs:
+  - get
+  - list
+  - watch

@@ -1,0 +1,28 @@
+---
+apiVersion: rbac.authorization.k8s.io/v1
+kind: Role
+metadata:
+  creationTimestamp: null
+  name: ack-transfer-writer
+  namespace: {{ .Release.Namespace }}
+rules:
+- apiGroups:
+  - transfer.services.k8s.aws
+  resources:
+  - webapps
+  verbs:
+  - create
+  - delete
+  - get
+  - list
+  - patch
+  - update
+  - watch
+- apiGroups:
+  - transfer.services.k8s.aws
+  resources:
+  - webapps
+  verbs:
+  - get
+  - patch
+  - update
