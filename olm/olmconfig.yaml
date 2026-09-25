@@ -1,0 +1,42 @@
+# This configuration is a placeholder. Replace any values with relevant values for your
+# service controller project.
+---
+annotations:
+  capabilityLevel: Basic Install
+  shortDescription: AWS Transfer controller is a service controller for managing Transfer resources
+    in Kubernetes
+displayName: AWS Controllers for Kubernetes - Amazon Transfer Family
+description: |-
+  Manage Amazon Transfer Family resources in AWS from within your Kubernetes cluster.
+
+
+  **About Amazon Transfer Family**
+
+
+  AWS Transfer Family is a secure transfer service that enables you to transfer files into and out of AWS storage services. It provides fully managed support for file transfers directly into and out of Amazon S3 and Amazon EFS using SFTP, FTPS, FTP, and AS2 protocols. Transfer Family simplifies migrating file transfer workflows to AWS, allowing you to maintain existing workflows and client configurations while leveraging the scalability and security of AWS storage services.
+
+
+  **About the AWS Controllers for Kubernetes**
+
+
+  This controller is a component of the [AWS Controller for Kubernetes](https://github.com/aws/aws-controllers-k8s)
+  project. This project is currently in **developer preview**.
+
+
+  **Pre-Installation Steps**
+
+
+  Please follow the following link: [Red Hat OpenShift](https://aws-controllers-k8s.github.io/community/docs/user-docs/openshift/)
+samples:
+- kind: ExampleCustomKind
+  spec: '{}'
+- kind: SecondExampleCustomKind
+  spec: '{}'
+maintainers:
+- name: "transfer maintainer team"
+  email: "ack-maintainers@amazon.com"
+links:
+- name: Amazon Transfer Family Developer Resources
+  url: https://aws.amazon.com/transfer/
+- name: Amazon Transfer Family User Guide
+  url: https://docs.aws.amazon.com/transfer/latest/userguide/
