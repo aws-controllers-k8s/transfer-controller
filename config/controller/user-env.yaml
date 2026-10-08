@@ -1,0 +1,17 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: ack-transfer-controller
+  namespace: ack-system
+spec:
+  template:
+    spec:
+      containers:
+      - name: controller
+        envFrom:
+          - configMapRef:
+              name: ack-transfer-user-config
+              optional: false
+          - secretRef:
+              name: ack-transfer-user-secrets
+              optional: true

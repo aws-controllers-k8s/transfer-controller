@@ -1,0 +1,10 @@
+ignore:
+  resource_names:
+      - Access
+      - Agreement
+      - Connector
+      - Profile
+      - Server
+      - User
+      - WebApp
+      - Workflow
